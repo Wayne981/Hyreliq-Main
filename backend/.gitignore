@@ -1,0 +1,5 @@
+# Add to .gitignore
+backend/.env
+*.env
+.env.local
+.env.*.local

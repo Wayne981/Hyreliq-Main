@@ -4,6 +4,12 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+  'sans': ['Lato', 'sans-serif'], // Keep Lato as default
+  'heading': ['Oswald', 'sans-serif'], // Add Oswald for headings
+  'lato': ['Lato', 'sans-serif'],
+  'oswald': ['Oswald', 'sans-serif'],
+},
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -65,3 +71,13 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 };
+
+// module.exports = {
+//   theme: {
+//     extend: {
+//       fontFamily: {
+//         'oswald': ['Oswald', 'sans-serif'],
+//       }
+//     }
+//   }
+// }

@@ -54,7 +54,7 @@ body {
   --bg-color: #f6f7f9;
   --secondary-dark-color: #1a1e2a;
   --max-width: 78rem;
-  --radius: 0.5rem;
+  --radius: 0.75rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -128,12 +128,118 @@ body {
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    -webkit-font-smoothing: antialiased;        
+    -moz-osx-font-smoothing: grayscale;        
+    text-rendering: optimizeLegibility; 
+
   }
+
+  *[class*="rounded"] {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
   body {
     @apply bg-[var(--bg-color)] dark:bg-background text-foreground;
   }
+  /* Oswald Bold Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+  }
+
+  
+  
+
+  /* Oswald Bold Headings */
+@layer utilities {
+  .text-heading-xl {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-heading-lg {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  
+  .text-heading-md {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  
+  .text-heading-sm {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  
+  .text-heading-xs {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  
+  /* Responsive heading classes */
+  .text-heading-hero {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  
+  @media (min-width: 768px) {
+    .text-heading-hero {
+      font-size: 48px;
+    }
+  }
+  
+  .text-heading-section {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  
+  @media (min-width: 768px) {
+    .text-heading-section {
+      font-size: 28px;
+    }
+  }
+
+    /* Add these lines before line 206 (before the closing brace of @layer utilities) */
+    .smooth-corners {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
+    }
+    
+    .anti-aliased {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 }
 
+
+}
 
 /* --chart-1: oklch(0.37 0.14 146.5);
 --chart-2: oklch(0.65 0.16 147.2);

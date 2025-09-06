@@ -99,7 +99,7 @@ const SignInForm = ({
                 <FormItem>
                   <FormLabel className="!font-normal">Password</FormLabel>
                   <FormControl>
-                    <Input placeholder="*******" type="password" {...field} />
+                    <Input placeholder="" type="password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

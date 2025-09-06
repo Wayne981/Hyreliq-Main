@@ -150,7 +150,7 @@ const SummaryCard: FC<SummaryCardProps> = ({
 
   if (isLoading) {
     return (
-      <Card className="!border-none !border-0 !gap-0 !bg-white/5">
+      <Card className="!border-none !border-0 !gap-0 !bg-white/5 rounded-xl">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 !pb-5">
           <Skeleton className="h-4 w-24 bg-white/30" />
         </CardHeader>
@@ -175,7 +175,7 @@ const SummaryCard: FC<SummaryCardProps> = ({
   };
 
   return (
-    <Card className="!border-none !border-0 !gap-0 !bg-white/5">
+    <Card className="!border-none !border-0 !gap-0 !bg-white/5 rounded-xl">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 !pb-5">
         <CardTitle className="text-[15px] text-gray-300 font-medium">
           {title}

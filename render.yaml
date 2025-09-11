@@ -1,7 +1,7 @@
 services:
   - type: web
     name: hyreliq-backend
-    runtime: node
+    env: node
     rootDir: backend
     buildCommand: npm install && npm run build
     startCommand: npm start
